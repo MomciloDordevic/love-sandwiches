@@ -133,3 +133,8 @@ def main():
 
 print("Welcome to Love Sandwiches Data Automation")
 main()
+
+
+def get_stock_values(data):
+    headings = SHEET.worksheet("stock").row_values(1)
+    return {headings[i]: data[i] for i in range(len(headings))}
